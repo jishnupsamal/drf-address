@@ -6,3 +6,9 @@ __pycache__
 migrations
 dist/
 *.egg-info/
+cred
+*.sqlite3
+.pypirc
+*.ipynb
+.vscode
+docs/build

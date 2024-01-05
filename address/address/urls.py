@@ -16,10 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .routers import r
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include((r.urls))),
+    path('', include("drf_address.urls")),
     path("__debug__/", include("debug_toolbar.urls")),
 ]

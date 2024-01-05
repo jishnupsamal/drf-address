@@ -11,9 +11,6 @@ class Address(models.Model):
     postal_code = models.CharField('Postal Code', max_length=100)
     state = models.CharField('State', max_length=100)
     country = models.ForeignKey('Country', on_delete=models.CASCADE, to_field='code')
-    
-    class Meta:
-        app_label = "address"
         
 class Country(models.Model):
     name = models.CharField('Name', max_length=100)

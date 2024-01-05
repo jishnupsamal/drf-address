@@ -6,7 +6,7 @@ class CountryRelatedField(serializers.RelatedField):
         return instance
 
     def to_representation(self, value):
-        return str(value)
+        return str(value.name)
     
     def to_internal_value(self, value):
         return Country.objects.get(code=value)

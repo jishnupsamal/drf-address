@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
     
     # Internal Apps
-    'address',
+    'drf_address',
 ]
 
 MIDDLEWARE = [

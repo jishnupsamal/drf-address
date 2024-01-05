@@ -4,13 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "drf-address"
-version = "0.0.1"
-dependencies = [
-    "requests",
-    'importlib-metadata; python_version<"3.12"',
-]
 description = 'A Django app to manage physical addresses'
-readme = 'file: README.rst'
+readme = 'README.rst'
 authors = [
     {name = "Jishnu Prasad Samal", email = "dev@jishnupsamal.me"},
 ]
@@ -19,7 +14,7 @@ keywords = ["address", "drf-address"]
 classifiers = [
     'Environment :: Web Environment',
     'Framework :: Django',
-    'Framework :: Django :: 5.0', # Replace "X.Y" as appropriate
+    'Framework :: Django :: 5.0',
     'Intended Audience :: Developers',
     'License :: OSI Approved :: MIT License',
     'Operating System :: OS Independent',
@@ -32,10 +27,16 @@ classifiers = [
     'Topic :: Internet :: WWW/HTTP',
     'Topic :: Internet :: WWW/HTTP :: Dynamic Content']
 requires-python = '>=3.10'
+dynamic = ["dependencies", "version"]
 
 [project.urls]
 Homepage = "https://github.com/jishnupsamal/drf-address"
 Issues = "https://github.com/jishnupsamal/drf-address/issues"
 
 [tool.setuptools.packages.find]
-include = ["docs*"]
+where = ["address"]
+exclude = ["address.address.migrations", "address.drf_address.migrations"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+version = {file = "__version__.txt"}

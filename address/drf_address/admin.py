@@ -10,6 +10,7 @@ class AddressAdmin(admin.ModelAdmin):
         
 class CountryAdmin(admin.ModelAdmin):
     list_display = ['name', 'code']
+    ordering = ['name']
         
 admin.site.register(Address, AddressAdmin)
 admin.site.register(Country, CountryAdmin)

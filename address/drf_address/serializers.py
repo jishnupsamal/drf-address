@@ -15,11 +15,11 @@ class CountryRelatedField(serializers.RelatedField):
 class AddressSerializer(serializers.ModelSerializer):
     country = CountryRelatedField(queryset = Country.objects.all(), required=True)
     
-    # def create(self, validated_data):
-    #     print(validated_data)
-    #     return super().create(validated_data)
-    
     class Meta:
         model = Address
         fields = "__all__"
-        # exclude = ['id']
+
+class CountrySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Country
+        fields = "__all__"

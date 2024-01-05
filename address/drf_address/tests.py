@@ -47,7 +47,7 @@ class AddressTest(TestCase):
             "district": "New Delhi",
             "city": "New Delhi",
             "postal_code": "110002",
-            "state": "Delhi",
+            "state": "Delhi"
         }
         res = client.post(reverse('address-list'), data=json.dumps(data), format='json')
         self.assertEqual(res.status_code, status.HTTP_201_CREATED)

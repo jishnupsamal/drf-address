@@ -12,3 +12,5 @@ cred
 *.ipynb
 .vscode
 docs/build
+docs/source/_build
+.tox

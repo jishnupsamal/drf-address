@@ -16,6 +16,7 @@ classifiers = [
     'Framework :: Django',
     'Framework :: Django :: 5.0',
     'Intended Audience :: Developers',
+    'Development Status :: 2 - Pre-Alpha',
     'License :: OSI Approved :: MIT License',
     'Operating System :: OS Independent',
     'Programming Language :: Python',
@@ -30,7 +31,9 @@ requires-python = '>=3.10'
 dynamic = ["dependencies", "version"]
 
 [project.urls]
-Homepage = "https://github.com/jishnupsamal/drf-address"
+Homepage = "https://drf-address.readthedocs.io/en/latest"
+Documentation = "https://drf-address.readthedocs.io/en/latest"
+Source = "https://github.com/jishnupsamal/drf-address"
 Issues = "https://github.com/jishnupsamal/drf-address/issues"
 
 [tool.setuptools.packages.find]
